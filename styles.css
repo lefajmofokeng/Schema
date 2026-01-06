@@ -1,0 +1,187 @@
+:root {
+            --sd5-font: 'Inter Tight', sans-serif;
+            --sd5-bg: #FFFFFF;
+            --sd5-text-dark: #111111;
+            --sd5-text-gray: #666666;
+            --sd5-accent-green: #849177;
+            --sd5-accent-orange: #F06A49;
+            --sd5-accent-cream: #FDF9F3;
+            --sd5-radius: 32px;
+            --sd5-transition: all 0.4s ease;
+        }
+
+        body {
+            margin: 0;
+            padding: 80px 20px;
+            font-family: var(--sd5-font);
+            background-color: var(--sd5-bg);
+            color: var(--sd5-text-dark);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .sd5-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Header Section */
+        .sd5-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .sd5-header h1 {
+            font-size: 52px;
+            font-weight: 500;
+            margin: 0 0 16px 0;
+            letter-spacing: -2px;
+            line-height: 1.1;
+        }
+
+        .sd5-header p {
+            font-size: 18px;
+            color: var(--sd5-text-gray);
+            max-width: 500px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* Bento Grid Layout */
+        .sd5-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            grid-template-rows: auto auto;
+            gap: 15px;
+        }
+
+        .sd5-card {
+            border-radius: var(--sd5-radius);
+            padding: 40px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        /* Card 1: Main Testimonial with Image Background */
+        .sd5-card-main {
+            grid-column: 1 / 2;
+            background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2116&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            min-height: 400px;
+            color: white;
+        }
+
+        .sd5-card-main h2 {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 1.2;
+            max-width: 400px;
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+
+        .sd5-card-main .sd5-author {
+            font-size: 15px;
+            font-weight: 500;
+            color: #f4f4f4;
+        }
+
+        /* Stats Cards */
+        .sd5-card-stats {
+            color: white;
+            padding: 50px 40px;
+        }
+
+        .sd5-card-green {
+            background-color: var(--sd5-accent-green);
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+
+        .sd5-card-orange {
+            background-color: var(--sd5-accent-orange);
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            width: 50%; /* Matches the offset width in the design */
+        }
+
+        .sd5-stat-number {
+            font-size: 80px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .sd5-stat-label {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .sd5-stat-desc {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #f4f4f4;
+            max-width: 250px;
+        }
+
+        /* Large Text Card */
+        .sd5-card-text {
+            background-color: var(--sd5-accent-cream);
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+            margin-left: calc(36% + 24px); /* Pushes it next to the orange card */
+            justify-content: center;
+        }
+
+        .sd5-quote {
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 1.3;
+            color: var(--sd5-text-dark);
+            letter-spacing: -0.5px;
+            margin-bottom: 60px;
+        }
+
+        .sd5-author-dark {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--sd5-text-gray);
+        }
+
+        /* Floating Plus Button */
+        .sd5-plus-btn {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            width: 44px;
+            height: 44px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: none;
+            font-size: 24px;
+            color: var(--sd5-text-dark);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 900px) {
+            .sd5-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+            .sd5-card-main, .sd5-card-green, .sd5-card-orange, .sd5-card-text {
+                grid-column: 1 / -1;
+                grid-row: auto;
+                width: 100% !important;
+                margin-left: 0 !important;
+            }
+            .sd5-header h1 { font-size: 40px; }
+        }
