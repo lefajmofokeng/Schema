@@ -4,6 +4,9 @@
 
 Schema is an advanced, data-driven testimonial component that implements sophisticated data visualization and interactive statistics. This component demonstrates enterprise-grade design patterns with animated counters, strategic grid layouts, and performance-optimized animations.
 
+<img width="1920" height="1518" alt="schema" src="https://github.com/user-attachments/assets/14c346b0-f691-4a8d-b012-f17f9eab9aeb" />
+
+
 ## Live Demo
 
 [Preview Live Demo](https://lefajmofokeng.github.io/Schema)  
